@@ -7,7 +7,6 @@ function init() {
   let loudness = document.querySelector('audio');
   let horn_type = document.getElementById('horn-select');
   horn_type.addEventListener('change', (event) => {
-    console.log(horn_type.value);
     if (horn_type.value == 'air-horn') {
       document.querySelector("img").src = 'assets/images/air-horn.svg'
       loudness.src = 'assets/audio/air-horn.mp3';
@@ -26,7 +25,6 @@ function init() {
   let volume_level = document.getElementById('volume');
   let volume_image = document.getElementById('volume-controls');
   volume_level.addEventListener('change', (event) => {
-    console.log(volume_level.value)
     if (volume_level.value == 0) {
       volume_image.querySelector('img').src = 'assets/icons/volume-level-0.svg';
       loudness.volume = volume_level.value/100;
